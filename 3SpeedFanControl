@@ -1,9 +1,11 @@
 /**
- * Virtual Thermostat for 3speed Ceiling Fan 
- *  This smartapp provides automatic control of Low, Medium, High speeds of smart fan control device.
- *  It works best with @ChadCK custom device handler Z-Wave Smart Fan Control 
+ * Virtual Thermostat for 3Speed Ceiling Fan Control 
+ *  This smartapp provides automatic control of Low, Medium, High speeds of smart fan control device using a
+ *  any temperature sensor. 
+ *  It works best with @ChadCK custom device handler Z-Wave Smart Fan Control located here
+ *  https://community.smartthings.com/t/z-wave-smart-fan-control-custom-device-type/25558
  *  along with the GE 12730 Z-Wave Smart Fan Control hardware. This smartapp was modified from the SmartThings
-  * Virtual Thermostat code which only allowed for on/off control of a switch.
+ *  Virtual Thermostat code which only allowed for on/off control of a switch.
  *
  *  Copyright 2016 Dale Coffing
  *
@@ -17,25 +19,25 @@
  *  for the specific language governing permissions and limitations under the License.
  *
  *
- *  Author: Dale Coffing, Stephen Coffing
+ *  Author: Dale Coffing
  *  Version: 20160505
  *
  * Change Log
  * 2016-5-5  autoMode added for manual override of auto control
  * 2016-5-4b cleaned debug logs, removed heat-cool selection, removed multiple stages
- * 2016-5-3  fixed error on not shutting down 
+ * 2016-5-3  fixed error on not shutting down, huge shout out to my bro Stephen Coffing in the logic formation 
  * 
  * Consider/Feature Requests:
- *		dump emergency setpoint function
- *		user adjustable temperature differentials for Low, Med, High
- *		Global Mode check and/or virtual switch to disable app 
+ *	-Is emergency setpoint function necessary
+ *	-User adjustable temperature differentials for Low, Med, High
+ *	-Global Mode check and/or virtual switch to disable app 
  *
  */
 definition(
-    name: "Virtual Thermostat for 3Speed Ceiling Fan",
+    name: "3Speed Ceiling Fan Control",
     namespace: "dcoffing",
     author: "Dale Coffing",
-    description: "Control a 3 Speed Ceiling Fan in conjunction with any temperature sensor.",
+    description: "Control a 3 Speed Ceiling Fan using Low, Medium, High speeds with any temperature sensor.",
     category: "My Apps",
     iconUrl: "https://s3.amazonaws.com/smartapp-icons/Meta/temp_thermo-switch.png",
     iconX2Url: "https://s3.amazonaws.com/smartapp-icons/Meta/temp_thermo-switch@2x.png"
